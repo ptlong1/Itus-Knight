@@ -17,6 +17,7 @@ public class Bullet : MonoBehaviour
     {
         Vector2 deltaPosition = moveDirection.normalized*speed*Time.deltaTime;
         transform.position += new Vector3(deltaPosition.x, deltaPosition.y, 0f);
+        transform.right = moveDirection.normalized;
     }
 
     public void SetDirection(Vector2 dir){
