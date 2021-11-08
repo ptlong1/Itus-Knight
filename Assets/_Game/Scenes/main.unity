@@ -12080,7 +12080,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18d4960cd9c929e4c95797fb3568e713, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 7644405210536944739, guid: 4b16af19e256f274c978c18a75501f54, type: 3}
+  bulletPrefab: {fileID: 6626315181270919083, guid: 45944e35a02dd7748b30a8a5e35684d3, type: 3}
   gunHead: {fileID: 1317004495}
   pullbackForce: 1
   delayTime: 0.1
