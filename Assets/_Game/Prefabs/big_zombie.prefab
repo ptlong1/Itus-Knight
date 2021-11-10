@@ -15,6 +15,9 @@ GameObject:
   - component: {fileID: 8840326027446796349}
   - component: {fileID: 8840326027446796348}
   - component: {fileID: 8840326027446796351}
+  - component: {fileID: 6310278355246439927}
+  - component: {fileID: 180190839426272473}
+  - component: {fileID: 2723096416694071593}
   m_Layer: 7
   m_Name: big_zombie
   m_TagString: Untagged
@@ -29,7 +32,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8840326027446796347}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -186,3 +189,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cea118e8e06b224db7ac7fc245cf4c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6310278355246439927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8840326027446796347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ce9ff68c1d622541a09e4ea93b86d8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHP: 3
+--- !u!114 &180190839426272473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8840326027446796347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddf5debd617926c449bad5013ab9d1e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  takeDamageLayer:
+    serializedVersion: 2
+    m_Bits: 512
+--- !u!114 &2723096416694071593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8840326027446796347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac394ec6f594dcf4db12eb7b5c5c749e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1

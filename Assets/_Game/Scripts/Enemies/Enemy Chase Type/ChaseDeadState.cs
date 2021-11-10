@@ -8,6 +8,7 @@ public class ChaseDeadState: ChaseBaseState
 
 	public override void EnterState()
 	{
+		Debug.Log("Chase Dead");
 	}
 
 	public override void ExitState()

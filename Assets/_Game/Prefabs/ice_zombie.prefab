@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 5075161433449930330}
   - component: {fileID: 5075161433449930331}
   - component: {fileID: 5075161433449930328}
+  - component: {fileID: 8621333351722241423}
+  - component: {fileID: 2277876619103373442}
   m_Layer: 7
   m_Name: ice_zombie
   m_TagString: Untagged
@@ -188,6 +190,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cea118e8e06b224db7ac7fc245cf4c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8621333351722241423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5075161433449930332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddf5debd617926c449bad5013ab9d1e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  takeDamageLayer:
+    serializedVersion: 2
+    m_Bits: 512
+--- !u!114 &2277876619103373442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5075161433449930332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ce9ff68c1d622541a09e4ea93b86d8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHP: 3
 --- !u!1001 &5075161433182493988
 PrefabInstance:
   m_ObjectHideFlags: 0

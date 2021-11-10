@@ -6,6 +6,7 @@ public class DeadShootState : ShootBaseState
 {
 	public override void EnterState()
 	{
+		Debug.Log("Shoot Dead");
 	}
 
 	public override void ExitState()

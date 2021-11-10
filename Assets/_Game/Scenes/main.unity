@@ -12179,6 +12179,7 @@ GameObject:
   - component: {fileID: 1094104143}
   - component: {fileID: 1094104142}
   - component: {fileID: 1094104146}
+  - component: {fileID: 1094104147}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -12358,6 +12359,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHP: 5
+--- !u!114 &1094104147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1094104138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddf5debd617926c449bad5013ab9d1e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  takeDamageLayer:
+    serializedVersion: 2
+    m_Bits: 384
 --- !u!1 &1095202677
 GameObject:
   m_ObjectHideFlags: 0

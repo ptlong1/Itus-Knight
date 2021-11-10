@@ -21,10 +21,13 @@ public class EnemyShootManager : MonoBehaviour
     public Transform currentTarget;
     public Gun gun; 
     public int numberBulletPerRound;
+    Health health;
     void Awake()
 	{
         rigidbody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        health = GetComponent<Health>();
+        health.OnDeathTrigger += OnDeath;
 		InitState();
 	}
 
@@ -59,5 +62,10 @@ public class EnemyShootManager : MonoBehaviour
         currentState.ExitState();
         currentState = state;
         currentState.EnterState();
+    }
+
+    void OnDeath(){
+        SwitchState(deadState);
+        Destroy(gameObject, 1f);
     }
 }

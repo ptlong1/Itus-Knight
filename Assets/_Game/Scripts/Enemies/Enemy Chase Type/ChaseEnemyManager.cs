@@ -18,13 +18,20 @@ public class ChaseEnemyManager : MonoBehaviour
     public float detectRange;
     public LayerMask targetLayer;
     public Transform currentTarget;
+    Health health;
 
     void Awake()
 	{
         rigidbody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        health = GetComponent<Health>();
+        health.OnDeathTrigger += OnDeath;
 		InitState();
 	}
+    void OnDeath(){
+        SwitchState(deadState);
+        Destroy(gameObject, 1f);
+    }
 
 	private void InitState()
 	{
