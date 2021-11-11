@@ -9,6 +9,7 @@ public class Gun : MonoBehaviour
     public float pullbackForce;
     public float delayTime;
     float currentDelayTime;
+    public ParticleSystem flashPrefab;
     void Update(){
         if (currentDelayTime > 0){
             currentDelayTime -= Time.deltaTime;
@@ -19,6 +20,7 @@ public class Gun : MonoBehaviour
         if (CanShoot()){
             Bullet bullet = Instantiate(bulletPrefab, gunHead.position, Quaternion.identity);
             bullet.SetDirection(dir);
+            Flash();
             return true;
         }
         return false;
@@ -30,5 +32,12 @@ public class Gun : MonoBehaviour
             return true;
         }
         return false;
+    }
+
+    void Flash(){
+        if (flashPrefab == null) return;
+        ParticleSystem flash = Instantiate(flashPrefab, gunHead.position, Quaternion.identity);
+        flash.transform.parent = transform;
+        Destroy(flash.gameObject, 0.2f);
     }
 }
