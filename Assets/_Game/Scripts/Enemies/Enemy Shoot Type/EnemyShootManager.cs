@@ -66,6 +66,6 @@ public class EnemyShootManager : MonoBehaviour
 
     void OnDeath(){
         SwitchState(deadState);
-        Destroy(gameObject, 1f);
+        Destroy(gameObject, 0f);
     }
 }

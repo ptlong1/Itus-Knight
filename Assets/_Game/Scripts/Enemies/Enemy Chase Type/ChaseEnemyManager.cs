@@ -30,7 +30,7 @@ public class ChaseEnemyManager : MonoBehaviour
 	}
     void OnDeath(){
         SwitchState(deadState);
-        Destroy(gameObject, 1f);
+        Destroy(gameObject, 0f);
     }
 
 	private void InitState()

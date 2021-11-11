@@ -9,6 +9,7 @@ public class ChaseDeadState: ChaseBaseState
 	public override void EnterState()
 	{
 		Debug.Log("Chase Dead");
+		// ctx.animator.SetBool("isDead", true);
 	}
 
 	public override void ExitState()
