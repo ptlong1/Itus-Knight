@@ -22,6 +22,7 @@ public class EnemyShootManager : MonoBehaviour
     public Gun gun; 
     public int numberBulletPerRound;
     Health health;
+    public ParticleSystem deadEffect;
     void Awake()
 	{
         rigidbody = GetComponent<Rigidbody2D>();

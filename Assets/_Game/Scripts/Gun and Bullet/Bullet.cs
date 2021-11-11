@@ -6,6 +6,7 @@ public class Bullet : MonoBehaviour
 {
     Vector2 moveDirection;
     public float speed;
+    public ParticleSystem hitEffect;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,5 +23,15 @@ public class Bullet : MonoBehaviour
 
     public void SetDirection(Vector2 dir){
         moveDirection = dir;
+    }
+
+    void OnCollisionEnter2D(Collision2D collision2D){
+        TriggerHitEffect(collision2D.contacts[0].point);
+    }
+
+    void TriggerHitEffect(Vector3 point){
+        if (hitEffect == null) return;
+        ParticleSystem hit = Instantiate(hitEffect, point, Quaternion.identity);
+        Destroy(hit.gameObject, 0.5f);
     }
 }

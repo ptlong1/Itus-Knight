@@ -19,6 +19,7 @@ public class ChaseEnemyManager : MonoBehaviour
     public LayerMask targetLayer;
     public Transform currentTarget;
     Health health;
+    public ParticleSystem deadEffect;
 
     void Awake()
 	{
