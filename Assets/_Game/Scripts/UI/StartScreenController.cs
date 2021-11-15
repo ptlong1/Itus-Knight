@@ -4,6 +4,7 @@ using UnityEngine;
 using DG.Tweening;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class StartScreenController : MonoBehaviour
 {
     [Header("Title Animation")]
@@ -26,6 +27,10 @@ public class StartScreenController : MonoBehaviour
     public ParticleSystem textSpark;
     [Header("Menu")]
     public CanvasGroup menu;
+    public CanvasGroup startScreen;
+    public CanvasGroup mapSelection;
+    [Header("Scene")]
+    public string[] scenes;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +38,17 @@ public class StartScreenController : MonoBehaviour
         oldTitlePos = titlePivot.position;
         // oldTitlePos = Vector3.zero;
         oldTitleScale = titlePivot.localScale;
+        mapSelection.gameObject.SetActive(false);
+    }
+
+    public void PlayTrigger(){
+        mapSelection.gameObject.SetActive(true);
+        startScreen.DOFade(0f, 0.2f).From(1f).OnComplete(() => startScreen.gameObject.SetActive(false));
+        mapSelection.DOFade(1f, 0.5f).From(0f);
+    }
+
+    public void LoadScene(int index){
+        SceneManager.LoadScene(scenes[index]);
     }
 
     void EnableMenu(){
