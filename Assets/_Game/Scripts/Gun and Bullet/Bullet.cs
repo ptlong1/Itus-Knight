@@ -7,10 +7,11 @@ public class Bullet : MonoBehaviour
     Vector2 moveDirection;
     public float speed;
     public ParticleSystem hitEffect;
+    AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
     {
-        
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -26,6 +27,7 @@ public class Bullet : MonoBehaviour
     }
 
     void OnCollisionEnter2D(Collision2D collision2D){
+        // audioSource.Play();
         TriggerHitEffect(collision2D.contacts[0].point);
     }
 

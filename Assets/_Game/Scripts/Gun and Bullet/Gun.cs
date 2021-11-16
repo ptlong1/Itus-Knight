@@ -10,6 +10,11 @@ public class Gun : MonoBehaviour
     public float delayTime;
     float currentDelayTime;
     public ParticleSystem flashPrefab;
+    AudioSource gunShoot;
+
+    void Awake(){
+        gunShoot = GetComponent<AudioSource>();
+    }
     void Update(){
         if (currentDelayTime > 0){
             currentDelayTime -= Time.deltaTime;
@@ -21,6 +26,7 @@ public class Gun : MonoBehaviour
             Bullet bullet = Instantiate(bulletPrefab, gunHead.position, Quaternion.identity);
             bullet.SetDirection(dir);
             Flash();
+            gunShoot?.Play();
             return true;
         }
         return false;
