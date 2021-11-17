@@ -180,7 +180,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openedChest: {fileID: 21300000, guid: 9402f9edcd0de6748bfe548415064aab, type: 3}
-  dropItems: []
+  dropItems:
+  - {fileID: 2676217937945126909, guid: e1cd9c0043381f84489fd2e3638da534, type: 3}
 --- !u!61 &8604295943482164194
 BoxCollider2D:
   m_ObjectHideFlags: 0
