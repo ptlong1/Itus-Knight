@@ -180,6 +180,7 @@ MonoBehaviour:
   gun: {fileID: 6427607811848327010}
   numberBulletPerRound: 10
   deadEffect: {fileID: 1097238070010264313}
+  dieSFX: {fileID: 8300000, guid: 3ab7a80e020907248afb79cc4292d2b1, type: 3}
 --- !u!114 &5075161433449930328
 MonoBehaviour:
   m_ObjectHideFlags: 0

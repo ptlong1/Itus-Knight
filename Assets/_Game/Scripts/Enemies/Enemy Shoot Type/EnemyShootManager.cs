@@ -23,6 +23,7 @@ public class EnemyShootManager : MonoBehaviour
     public int numberBulletPerRound;
     Health health;
     public ParticleSystem deadEffect;
+    public AudioClip dieSFX;
     void Awake()
 	{
         rigidbody = GetComponent<Rigidbody2D>();
@@ -67,6 +68,7 @@ public class EnemyShootManager : MonoBehaviour
 
     void OnDeath(){
         SwitchState(deadState);
+        FindObjectOfType<AudioHitController>().Play(dieSFX);
         Destroy(gameObject, 0f);
     }
 }

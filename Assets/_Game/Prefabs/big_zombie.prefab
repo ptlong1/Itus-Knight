@@ -180,6 +180,7 @@ MonoBehaviour:
     m_Bits: 64
   currentTarget: {fileID: 0}
   deadEffect: {fileID: 4011426414636334062}
+  dieSFX: {fileID: 8300000, guid: 3ab7a80e020907248afb79cc4292d2b1, type: 3}
 --- !u!114 &8840326027446796351
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -13,7 +13,7 @@ public class DestroyOnCollision : MonoBehaviour
         Debug.Log(collider2D.gameObject);
         if (((1 << collider2D.gameObject.layer) | collisionMask) == collisionMask){
             AudioHitController audioHit =  FindObjectOfType<AudioHitController>();
-            audioHit.Play(audioHit.hitSFX);
+        // audioHit.Play(audioHit.hitSFX);
             Destroy(gameObject);
         }
     }

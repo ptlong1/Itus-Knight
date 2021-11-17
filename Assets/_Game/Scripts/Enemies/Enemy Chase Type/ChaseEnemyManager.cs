@@ -20,7 +20,7 @@ public class ChaseEnemyManager : MonoBehaviour
     public Transform currentTarget;
     Health health;
     public ParticleSystem deadEffect;
-
+    public AudioClip dieSFX;
     void Awake()
 	{
         rigidbody = GetComponent<Rigidbody2D>();
@@ -31,6 +31,7 @@ public class ChaseEnemyManager : MonoBehaviour
 	}
     void OnDeath(){
         SwitchState(deadState);
+        FindObjectOfType<AudioHitController>().Play(dieSFX);
         Destroy(gameObject, 0f);
     }
 
