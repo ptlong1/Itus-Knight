@@ -99,6 +99,7 @@ GameObject:
   - component: {fileID: 5075161433449930328}
   - component: {fileID: 8621333351722241423}
   - component: {fileID: 2277876619103373442}
+  - component: {fileID: 4800665088222689034}
   m_Layer: 7
   m_Name: ice_zombie
   m_TagString: Untagged
@@ -305,6 +306,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHP: 3
   hpUI: {fileID: 0}
+--- !u!114 &4800665088222689034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5075161433449930332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c332bedbd7527a45b58323c8312aca2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4538946566483669512
 PrefabInstance:
   m_ObjectHideFlags: 0

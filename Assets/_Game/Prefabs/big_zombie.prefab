@@ -101,6 +101,7 @@ GameObject:
   - component: {fileID: 180190839426272473}
   - component: {fileID: 2723096416694071593}
   - component: {fileID: 4960584535366903037}
+  - component: {fileID: 1509237832720679887}
   m_Layer: 7
   m_Name: big_zombie
   m_TagString: Untagged
@@ -332,6 +333,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 2676217937945126909, guid: e1cd9c0043381f84489fd2e3638da534, type: 3}
   probability: 0.5
+--- !u!114 &1509237832720679887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8840326027446796347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c332bedbd7527a45b58323c8312aca2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &462970255527359263
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -21,8 +21,11 @@ public class chest_touch : MonoBehaviour
             colorOpened.a = 0.5f;
             spriteRenderer.color = colorOpened;
 
-            int random = Random.Range(0, dropItems.Count - 1);
-            Instantiate(dropItems[random], this.transform.position, this.transform.rotation);
+            if (dropItems.Count != 0){
+                int random = Random.Range(0, dropItems.Count - 1);
+                Instantiate(dropItems[random], this.transform.position, this.transform.rotation);
+
+            }
         }    
     }
 }
