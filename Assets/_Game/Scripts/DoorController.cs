@@ -29,7 +29,7 @@ public class DoorController : MonoBehaviour
         if (!isOpen) return;
         if (other.gameObject.layer == LayerMask.NameToLayer("Player")){
             Debug.Log("Activate");
-        }
         SceneManager.LoadScene(nextScene);
+        }
     }
 }
