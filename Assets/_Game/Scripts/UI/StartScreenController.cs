@@ -7,6 +7,9 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 public class StartScreenController : MonoBehaviour
 {
+    public float timeWait;
+    float currentTime;
+    bool isShown;
     [Header("Title Animation")]
     public RectTransform titlePivot;
     public TMP_Text title1;
@@ -39,6 +42,8 @@ public class StartScreenController : MonoBehaviour
         // oldTitlePos = Vector3.zero;
         oldTitleScale = titlePivot.localScale;
         mapSelection.gameObject.SetActive(false);
+        currentTime = timeWait;
+        isShown = false;
     }
 
     public void PlayTrigger(){
@@ -96,12 +101,14 @@ public class StartScreenController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space)){
+        currentTime -= Time.deltaTime;
+        if (Input.GetKeyDown(KeyCode.Space) || (currentTime < 0f && !isShown)){
             InitTitle();
             // ChangeTitleColor();
             // TitleAnimation();
             FlashVerticle();
             PlayBGM();
+            isShown = true;
         }
     }
 
