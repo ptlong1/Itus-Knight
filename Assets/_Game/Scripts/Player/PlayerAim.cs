@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerAim : MonoBehaviour
 {
     Vector2 mousePosition;
-    public Gun gun;
+    public GunManager gun;
     SpriteRenderer spriteRenderer;
     Rigidbody2D rigidbody2D;
 
@@ -47,7 +47,7 @@ public class PlayerAim : MonoBehaviour
         if (Input.GetMouseButton(0)){
             Vector2 gunPosition = gun.transform.position;
             Vector2 dir = mousePosition - gunPosition;
-            if (gun.ShootAtDirection(dir)){
+            if (gun.ShootAtDirection()){
                 // rigidbody2D.AddForce(-gun.pullbackForce*dir,ForceMode2D.Impulse);
             };
         }

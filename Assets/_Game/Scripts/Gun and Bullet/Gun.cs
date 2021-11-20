@@ -5,7 +5,7 @@ using UnityEngine;
 public class Gun : MonoBehaviour
 {
     public Bullet bulletPrefab;
-    public Transform gunHead;
+    public Transform[] gunHeads;
     public float pullbackForce;
     public float delayTime;
     float currentDelayTime;
@@ -23,9 +23,23 @@ public class Gun : MonoBehaviour
 
     public bool ShootAtDirection(Vector2 dir){
         if (CanShoot()){
-            Bullet bullet = Instantiate(bulletPrefab, gunHead.position, Quaternion.identity);
-            bullet.SetDirection(dir);
-            Flash();
+            foreach(Transform gunHead in gunHeads){
+                Bullet bullet = Instantiate(bulletPrefab, gunHead.position, Quaternion.identity);
+                bullet.SetDirection(dir);
+                Flash(gunHead.position);
+            }
+            gunShoot?.Play();
+            return true;
+        }
+        return false;
+    }
+    public bool ShootAtDirection(){
+        if (CanShoot()){
+            foreach(Transform gunHead in gunHeads){
+                Bullet bullet = Instantiate(bulletPrefab, gunHead.position, Quaternion.identity);
+                bullet.SetDirection(gunHead.right);
+                Flash(gunHead.position);
+            }
             gunShoot?.Play();
             return true;
         }
@@ -40,9 +54,9 @@ public class Gun : MonoBehaviour
         return false;
     }
 
-    void Flash(){
+    void Flash(Vector2 position){
         if (flashPrefab == null) return;
-        ParticleSystem flash = Instantiate(flashPrefab, gunHead.position, Quaternion.identity);
+        ParticleSystem flash = Instantiate(flashPrefab, position, Quaternion.identity);
         flash.transform.parent = transform;
         Destroy(flash.gameObject, 0.2f);
     }

@@ -8,18 +8,25 @@ public class Bullet : MonoBehaviour
     public float speed;
     public ParticleSystem hitEffect;
     AudioSource audioSource;
+    Rigidbody2D rigidbody2D;
+    public Vector2 oldDirection;
     // Start is called before the first frame update
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        rigidbody2D = GetComponent<Rigidbody2D>();
+        Destroy(gameObject, 5f);
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        Vector2 deltaPosition = moveDirection.normalized*speed*Time.deltaTime;
-        transform.position += new Vector3(deltaPosition.x, deltaPosition.y, 0f);
+        // Vector2 deltaPosition = moveDirection.normalized*speed*Time.deltaTime;
+        // transform.position += new Vector3(deltaPosition.x, deltaPosition.y, 0f);
+        // transform.right = moveDirection.normalized;
+        rigidbody2D.velocity = moveDirection.normalized*speed;
         transform.right = moveDirection.normalized;
+        oldDirection = moveDirection.normalized;
     }
 
     public void SetDirection(Vector2 dir){

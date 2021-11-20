@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
-public class HPItem : MonoBehaviour
+public class HPItem : Item
 {
     public float value;
     public LayerMask target;
-    public AudioClip sfx;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,8 +31,4 @@ public class HPItem : MonoBehaviour
         }
     }
 
-    void PlaySound(){
-        // GameObject go = Instantiate(typeof(GameObject), transform.position, Quaternion.identity);
-        FindObjectOfType<AudioHitController>().Play(sfx);
-    }
 }
