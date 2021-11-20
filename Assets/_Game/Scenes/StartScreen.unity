@@ -5239,6 +5239,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be3841a6cac664344a87d0f84d2f580e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeWait: 1
   titlePivot: {fileID: 1373418236}
   title1: {fileID: 1321182759}
   title2: {fileID: 1659504590}

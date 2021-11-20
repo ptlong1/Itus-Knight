@@ -21,6 +21,8 @@ public class ChaseEnemyManager : MonoBehaviour
     Health health;
     public ParticleSystem deadEffect;
     public AudioClip dieSFX;
+    public int deathType;
+    public GameObject childPrefab;
     void Awake()
 	{
         rigidbody = GetComponent<Rigidbody2D>();
@@ -41,7 +43,12 @@ public class ChaseEnemyManager : MonoBehaviour
 		wanderingState.SetContext(this);
 		chasingState = new ChaseChaseState();
 		chasingState.SetContext(this);
-		deadState = new ChaseDeadState();
+        if (deathType == 0){
+            deadState = new ChaseDeadState();
+        }
+        else if (deathType == 1){
+            deadState = new ChaseDead2State();
+        }
 		deadState.SetContext(this);
 	}
 

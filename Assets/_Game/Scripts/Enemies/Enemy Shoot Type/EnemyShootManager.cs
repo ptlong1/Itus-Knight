@@ -11,6 +11,8 @@ public class EnemyShootManager : MonoBehaviour
     public ShootBaseState shootingState;
     public ShootBaseState deadState;
 
+    public int shootType;
+
     public float wanderSpeed;
     [HideInInspector]
      public Rigidbody2D rigidbody;
@@ -37,7 +39,12 @@ public class EnemyShootManager : MonoBehaviour
 	{
 		wanderingState = new WanderShootState();
 		wanderingState.SetContext(this);
-		shootingState = new ShootShootState();
+        if (shootType == 0){
+            shootingState = new ShootShootState();
+        }
+        else if(shootType == 1){
+            shootingState = new ShootShoot2State();
+        }
 		shootingState.SetContext(this);
 		deadState = new DeadShootState();
 		deadState.SetContext(this);
