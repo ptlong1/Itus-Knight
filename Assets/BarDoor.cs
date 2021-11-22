@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class BarDoor : MonoBehaviour
 {
-    bool isOpen;
+    public bool isOpen;
     public GameObject doorClose;
     public GameObject doorOpen;
     public string nextScene;
@@ -12,11 +12,20 @@ public class BarDoor : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        isOpen = false;
+        doorClose.SetActive(true);
+        doorOpen.SetActive(false);
+        GetComponent<Collider2D>().isTrigger = false;
+        FindObjectOfType<PanelController>().OnClear += OpenDoor;
+    }
+
+    public void OpenDoor()
+    {
         isOpen = true;
         doorClose.SetActive(false);
         doorOpen.SetActive(true);
         GetComponent<Collider2D>().isTrigger = true;
-    }
+    }    
 
     void OnTriggerEnter2D(Collider2D other)
     {

@@ -1,0 +1,10 @@
+{
+  "dialogue": [
+    {
+      "characterAvatar": "DES"
+    },
+    {
+      "characterAvatar": "DES"
+    }
+  ]
+}

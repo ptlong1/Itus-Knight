@@ -1,0 +1,14 @@
+{
+  "dialogue": [
+    {
+      "name": "Tavern Master",
+      "dialogueText": "You are very strange, are you new here!",
+      "leftSide": true
+    },
+    {
+      "name": "Knight",
+      "dialogueText": "Yeah! I come here from a far away country.",
+      "leftSide": false
+    }
+  ]
+}
